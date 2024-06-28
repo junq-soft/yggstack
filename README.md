@@ -1,5 +1,5 @@
 <h1 style="color:red"> IMPORTANT!!! </h1>
-<h2> This fork is not compatible with the original yggstack and will break the normal use of socks5 proxy in yggstack </h2>
+<h2> This fork is not compatible with the original yggstack and will break the normal work of socks5 proxy in yggstack </h2>
 <br><br><br><br><br><br>
 
 # Yggstack - Yggdrasil as SOCKS proxy / port forwarder
