@@ -305,6 +305,16 @@ func main() {
 						_ = c.Close()
 						continue
 					}
+
+					// junq patch start
+					// send remote connection addr to host client
+					c_addr, _, _ := net.SplitHostPort(c.RemoteAddr().String())
+					ipb := net.ParseIP(c_addr)
+					ip6len := []byte{0, 0, 16}
+					r.Write(ip6len)
+					r.Write(ipb)
+					// junq patch end
+					
 					go types.ProxyTCP(n.core.MTU(), c, r)
 				}
 			}(mapping)
